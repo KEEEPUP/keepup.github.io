@@ -1,19 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Imad and Samira</title>
+<head>
+    <title>Character Walking</title>
     <style>
-      body {
-        display:flex;
+        body {
+            display:flex;
         align-items: center;
         justify-content: center;
         min-height:100vh;
         margin: 0;
         background-color: lightcoral;
         font-family: sans-serif;
-      }
+        }
 
-      h1 {
+        .road {
+            border-bottom: 7px dashed black;
+        }
+
+        .runner {
+            /*this is the image which is animated below*/
+            background: url("https://phpcoder.tech/wp-content/uploads/2021/04/Cartoon.png") no-repeat;
+            width: 185px;
+            height: 290px;
+
+            /*code below shows the speed of the steps*/
+            animation: walk 1.2s steps(8) infinite,
+                forward 5s linear infinite;
+                margin-top: 600px;
+        }
+
+        /*Code below use for walking animation*/
+        @keyframes walk {
+            0% {
+                background-position: 0px;
+            }
+
+            100% {
+                background-position: -1472px;
+            }
+        }
+
+        @keyframes forward {
+            0% {
+                transform: translateX(-100px);
+            }
+
+            100% {
+                transform: translateX(1200px);
+            }
+        }
+        h1 {
         font-size: 2.5rem;
         margin-right: 100px;
         text-align: center;
@@ -72,9 +108,15 @@
         }
       }
     </style>
-  </head>
-  <body>
-    <h1>Imad and Samira</h1>
-    <div class="heart"></div>
-  </body>
+</head>
+
+<body>
+    <div class="runner"></div>
+    <div class="road"></div>
+    
+        <h1>Imad and Samira</h1>
+        <div class="heart"></div>
+    
+</body>
+
 </html>
