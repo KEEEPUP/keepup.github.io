@@ -1,122 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Imad Samira</title>
-    <style>
-        body {
-            display:flex;
-        align-items: center;
-        justify-content: center;
-        min-height:100vh;
-        margin: 0;
-        background-color: lightcoral;
-        font-family: sans-serif;
-        }
-
-        .road {
-            border-bottom: 7px dashed black;
-        }
-
-        .runner {
-            /*this is the image which is animated below*/
-            background: url("https://phpcoder.tech/wp-content/uploads/2021/04/Cartoon.png") no-repeat;
-            width: 185px;
-            height: 290px;
-
-            /*code below shows the speed of the steps*/
-            animation: walk 1.2s steps(8) infinite,
-                forward 5s linear infinite;
-                margin-top: 600px;
-        }
-
-        /*Code below use for walking animation*/
-        @keyframes walk {
-            0% {
-                background-position: 0px;
-            }
-
-            100% {
-                background-position: -1472px;
-            }
-        }
-
-        @keyframes forward {
-            0% {
-                transform: translateX(-100px);
-            }
-
-            100% {
-                transform: translateX(1200px);
-            }
-        }
-        h1 {
-        font-size: 2.5rem;
-        margin-right: 100px;
-        text-align: center;
-        color: white;
-        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
-      }
-
-      .heart {
-        background: red;
-        position: relative;
-        height: 100px;
-        width:100px;
-        /* Animation */
-        transform: rotate(-45deg) scale(1);
-        animation: pulse 2s linear infinite;
-      }
-
-      .heart::after {
-        /* background:blue; */
-        background:inherit;
-        border-radius: 50%; /* To make circle */
-        content:'';
-        position:absolute;
-        /* top: -100px;*/
-        top: -50%; /* Inherit properties of parent */
-        /* left: -100px; */
-        left:0;
-        height: 100px;
-        width:100px;
-      }
-
-      .heart::before {
-        /* background:green; */
-        background:inherit;
-        border-radius: 50%; /* To make circle */
-        content:'';
-        position:absolute;
-        top:0;
-        right:-50%; /* Inherit properties of parent */
-        height: 100px;
-        width:100px;
-      }
-
-      @keyframes pulse{
-        0% {
-          transform: rotate(-45deg) scale(1);
-          opacity: 0;
-        }
-        50% {
-          transform: rotate(-45deg) scale(1.3);
-          opacity: 1;
-        }
-        100% {
-          transform: rotate(-45deg) scale(1);
-          opacity: 1;
-        }
-      }
-    </style>
+  <title>Imad Samira</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="runner"></div>
-    <div class="road"></div>
-    
-        <h1>Imad and Samira</h1>
-        <div class="heart"></div>
-    
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="scipt.js"></script>
+  
+
+  <div class="container overlay">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3 class="animate-charcter"> Imad & Samira </h3>
+      </div>
+    </div>
+  </div>
+
+  <div id="header-plugin"></div>
+
+  <div class="bg_heart"></div>
+
+
+
 </body>
 
 </html>
